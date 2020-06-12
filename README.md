@@ -1,2 +1,2 @@
-# os-tube-server
+# OSTube Server
 Multimedia Server written in C
