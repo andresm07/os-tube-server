@@ -28,6 +28,18 @@ Josue Canales Mena - [josuecm13](https://github.com/josuecm13)
 
 sudo apt-get install libpulse-dev libmad0-dev libpulse0 libmad0 libssl-dev
 
+### Server
+
+make
+
+./server port_number
+
+### CLI Client
+
+make
+
+./client ip_address port_number
+
 ## Web Client
 
 npm install
