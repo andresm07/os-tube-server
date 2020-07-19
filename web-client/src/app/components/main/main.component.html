@@ -1,0 +1,38 @@
+<img [src]= "imageurl" alt= "">
+
+<p>
+  Welcome
+</p>
+
+<video id="video-example" controls>
+  <source [src]="videourl">
+</video>
+
+
+<button (click) = "getData()"> Load data</button>
+
+<table mdbTable>
+  <thead class="black white-text">
+    <tr>
+      <th>Name</th>
+      <th> Content Type</th>
+      <th> Functionality </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr mdbTableCol *ngFor=" let multimedia of list">
+      <td>
+        {{multimedia.name}}
+      </td>
+      <td>
+        {{multimedia.filetype}}
+      </td>
+      <td>
+        <button (click)="getResource(multimedia)" >
+          Play/View
+        </button>
+      </td>
+    </tr>
+  </tbody>
+
+</table>

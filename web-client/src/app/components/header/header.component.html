@@ -1,0 +1,31 @@
+<mat-toolbar color="primary">
+  
+  <span class="flex-spacer"></span>
+  <a mat-button (click)="openRegisterForm()">
+    <span class="fa fa-pencil fa-lg"></span>
+    Register
+  </a>
+  <a mat-button (click)="openLoginForm()">
+    <span class="fa fa-sign-in fa-lg"></span>
+    Login
+  </a>
+  <a mat-button (click)="openIpForm()">
+    <span class="fa fa-pencil fa-lg"></span>
+    IP
+  </a>
+</mat-toolbar>
+
+<div class="container jumbotron"
+    fxLayout="row"
+    fxLayout.sm="column" 
+    fxLayout.xs="column" 
+    fxLayoutAlign.xs="start center"
+    fxLayoutAlign.sm="start center" 
+    fxLayoutAlign.gt-sm="center center" 
+    fxLayoutGap="10px">
+
+  <div fxFlex fxFlex.gt-sm="50%">
+    <h1>OSTube - Online Streaming Client</h1>
+  </div>
+  <div fxFlex></div>
+</div>

@@ -1,0 +1,29 @@
+<mat-toolbar color="primary">
+  Register
+  <span class="flex-spacer"></span>
+  <button mat-button mat-dialog-close>&times;</button>
+</mat-toolbar>
+
+<form novalidate #registerForm="ngForm" (ngSubmit)="onSubmit()">
+  <mat-dialog-content>
+    <p>
+      <mat-form-field>
+        <input matInput placeholder="Username" type="text" [(ngModel)]="user.username" name="username" #username="ngModel" required>
+        <mat-error *ngIf="username.errors?.required">Username is required</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Password" type="password" [(ngModel)]="user.password" name="password" #password="ngModel" required>
+        <mat-error *ngIf="password.errors?.required">Password is required</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="IP:port" type="text" [(ngModel)]="datas.ipport" name="ip" required>
+      </mat-form-field>
+    </p>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <span class="flex-spacer">
+      <button mat-button mat-dialog-close>Cancel</button>
+      <button mat-button type="submit" class="background-primary text-floral-white" [disabled]="registerForm.form.invalid">Register</button>
+    </span>
+  </mat-dialog-actions>
+</form>
